@@ -8,10 +8,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install HTML linter
+        name: install HTML linter
           command: |
           apt-get install tidy
       - run:
-          name: run lint
+        name: run lint
           command: |
-            make lint
+          make lint
