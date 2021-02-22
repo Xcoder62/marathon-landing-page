@@ -1,2 +1,2 @@
 lint:
-  htmllint-cli index.html
+	htmllint index.html
