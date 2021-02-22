@@ -1,0 +1,2 @@
+lint:
+  tidy index.html
