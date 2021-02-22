@@ -11,6 +11,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: which OS?
+          command: cat /etc/os-release
+      - run:
           name: Install Docker Client
           command: |
             apt-get update
