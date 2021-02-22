@@ -2,17 +2,12 @@
 ---
 version: 2.1
 jobs:
-  build:
+  one:
     docker:
-      - image: "httpd:2.4-alpine"
+      - image: "ekostadinov/web-linters"
     working_directory: ~/repo
     steps:
       - checkout
-      - run:
-          name: install HTML linter
-          command: |
-            wget https://github.com/htacg/tidy-html5/releases/download/5.4.0/tidy-5.4.0-64bit.deb
-            dpkg -i tidy-5.4.0-64bit.deb
       - run:
           name: run lint
           command: |

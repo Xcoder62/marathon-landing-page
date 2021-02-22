@@ -1,2 +1,2 @@
 lint:
-  tidy index.html
+  htmllint-cli index.html
