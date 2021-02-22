@@ -1,3 +1,2 @@
 lint:
-	htmllint init
-	htmllint index.html	
+	tidy index.html
