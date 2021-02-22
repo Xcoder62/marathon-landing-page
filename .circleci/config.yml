@@ -25,12 +25,6 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run:
-          name: run lint
-          command: |
-            wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-            chmod +x /bin/hadolint
-            hadolint Dockerfile
       - aws-ecr/build-and-push-image:
           repo: ox-privatecons
           tag: "latest,v0.1.${CIRCLE_BUILD_NUM}"
@@ -42,4 +36,6 @@ workflows:
     jobs:
       - build
       - push
+          requires:
+            - build
           
