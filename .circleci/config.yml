@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: Install Docker Client
-          command: apt-get -y docker-cli
+          command: apt-get install -y docker-cli
       - run:
           name: run lint
           command: |
