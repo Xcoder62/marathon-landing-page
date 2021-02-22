@@ -1,3 +1,3 @@
 lint:
 	htmllint init
-	htmllint index.html
+	htmllint index.html --class-style none
