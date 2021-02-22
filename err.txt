@@ -1,0 +1,55 @@
+line 7 column 68 - Warning: unescaped & or unknown entity "&family"
+line 7 column 85 - Warning: unescaped & or unknown entity "&display"
+line 20 column 17 - Warning: missing <li>
+line 20 column 17 - Warning: missing </a> before <li>
+line 20 column 54 - Warning: inserting implicit <ul>
+line 20 column 71 - Warning: discarding unexpected </a>
+line 21 column 17 - Warning: missing <li>
+line 21 column 17 - Warning: missing </li> before <a>
+line 21 column 72 - Warning: discarding unexpected </a>
+line 22 column 17 - Warning: missing <li>
+line 22 column 17 - Warning: missing </li> before <a>
+line 22 column 69 - Warning: discarding unexpected </a>
+line 23 column 17 - Warning: missing <li>
+line 23 column 17 - Warning: missing </li> before <a>
+line 23 column 72 - Warning: discarding unexpected </a>
+line 20 column 17 - Warning: missing </a>
+line 19 column 13 - Warning: missing </ul> before </nav>
+line 98 column 13 - Warning: missing </ul> before </div>
+line 105 column 13 - Warning: discarding unexpected </ul>
+line 112 column 13 - Warning: missing </ul> before </div>
+line 119 column 13 - Warning: discarding unexpected </ul>
+line 126 column 13 - Warning: missing </ul> before </div>
+line 133 column 13 - Warning: discarding unexpected </ul>
+line 14 column 25 - Warning: <img> lacks "alt" attribute
+line 30 column 9 - Warning: <img> lacks "alt" attribute
+line 21 column 17 - Warning: trimming empty <li>
+line 22 column 17 - Warning: trimming empty <li>
+line 23 column 17 - Warning: trimming empty <li>
+line 46 column 27 - Warning: trimming empty <i>
+line 59 column 13 - Warning: trimming empty <i>
+line 70 column 27 - Warning: trimming empty <i>
+line 144 column 13 - Warning: trimming empty <i>
+line 145 column 13 - Warning: trimming empty <i>
+line 146 column 13 - Warning: trimming empty <i>
+line 88 column 9 - Warning: <iframe> proprietary attribute "allow"
+Info: Document content looks like HTML5
+Tidy found 35 warnings and 0 errors!
+
+The alt attribute should be used to give a short description
+of an image; longer descriptions should be given with the
+longdesc attribute which takes a URL linked to the description.
+These measures are needed for people using non-graphical browsers.
+
+For further advice on how to make your pages accessible
+see http://www.w3.org/WAI/GL.
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
