@@ -9,9 +9,9 @@ jobs:
       - checkout
       - run:
         name: install HTML linter
-          command: |
+        command: |
           apt-get install tidy
       - run:
         name: run lint
-          command: |
+        command: |
           make lint
