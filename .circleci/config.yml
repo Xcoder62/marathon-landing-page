@@ -41,7 +41,7 @@ jobs:
             chmod +x /bin/hadolint
             hadolint Dockerfile
       - aws-ecr/build-and-push-image:
-          repo: ox-privatecons
+          repo: ox-containers
           tag: "latest,v0.1.${CIRCLE_BUILD_NUM}"
           dockerfile: build/Dockerfile
           path: .
