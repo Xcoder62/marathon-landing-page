@@ -43,7 +43,6 @@ jobs:
             hadolint Dockerfile
       - aws-ecr/build-and-push-image:
           repo: ox-privatecons
-          account-url: 165692421294.dkr.ecr.us-west-2.amazonaws.com
           tag: "latest,v0.1.${CIRCLE_BUILD_NUM}"
           dockerfile: build/Dockerfile
           path: .
