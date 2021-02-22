@@ -2,7 +2,7 @@
 ---
 version: 2.1
 jobs:
-  one:
+  build:
     docker:
       - image: "ekostadinov/web-linters"
     working_directory: ~/repo
