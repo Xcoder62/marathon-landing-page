@@ -6,9 +6,42 @@ orbs:
   aws-ecr: circleci/aws-ecr@6.15.0
 jobs:
   build:
-    machine: true
+    docker:
+      - image: "python:3.7.3-stretch"
+    working_directory: ~/repo
     steps:
       - checkout
+      - run:
+          name: which OS?
+          command: cat /etc/os-release
+      - run:
+          name: Install Docker Client
+          command: |
+            apt-get update
+            apt-get install -y \
+            apt-transport-https \
+            ca-certificates \
+            curl \
+            gnupg-agent \
+            software-properties-common
+
+            curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+
+
+            add-apt-repository \
+            "deb [arch=amd64] https://download.docker.com/linux/debian \
+            $(lsb_release -cs) \
+            stable"
+
+            apt-get update
+            apt-get install -y docker-ce docker-ce-cli containerd.io
+      - run:
+          name: run lint
+          command: |
+            wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+            chmod +x /bin/hadolint
+            hadolint Dockerfile
+            
       - aws-ecr/build-and-push-image:
           repo: ox-privatecons
           tag: "latest,v0.1.${CIRCLE_BUILD_NUM}"

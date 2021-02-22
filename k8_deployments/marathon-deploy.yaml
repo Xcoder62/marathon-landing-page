@@ -10,6 +10,7 @@ spec:
     metadata:
       labels:
         app: marathon-app # the label for the pods and the deployments
+        version: v1
     spec:
       containers:
       - name: marathon-app

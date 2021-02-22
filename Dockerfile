@@ -1,3 +1,3 @@
-FROM httpd:2.4-alpine
-COPY . /usr/local/apache2/htdocs/
+FROM ubuntu:18.04
+COPY . /var/www/html
 EXPOSE 80
