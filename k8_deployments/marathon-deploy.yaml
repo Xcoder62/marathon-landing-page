@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: marathon-app
+spec:
+  selector:
+    matchLabels:
+      app: marathon-app
+  template:
+    metadata:
+      labels:
+        app: marathon-app # the label for the pods and the deployments
+    spec:
+      containers:
+      - name: marathon-app
+        image: 165692421294.dkr.ecr.us-west-2.amazonaws.com/ox-privatecons:latest # IMPORTANT: update with your own repository
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80 # the application listens to this port
