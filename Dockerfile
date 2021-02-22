@@ -1,3 +1,6 @@
-FROM httpd:2.4-alpine
-RUN apt-get update -y && apt-get install tidy
-COPY . /usr/local/apache2/htdocs/
+FROM ubuntu:18.04
+RUN apt-get update \
+  && apt-get install apache2 -y && apt-get install tidy
+COPY . /var/www/html
+EXPOSE 80
+RUN service apache2 restart
